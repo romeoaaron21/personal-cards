@@ -72,7 +72,6 @@ fetch(`${baseUrl}`)
         filterGet([...card])
         searchAll([...card]);
         searchName([...card])
-        removeCard([...card]);
     })
 
 
@@ -203,7 +202,6 @@ function displayCardResult(cardArr) {
           getDisplayResult(this.id, cardArr)
         });
       });
-
 }
 
 
@@ -214,6 +212,7 @@ function getDisplayResult(id, cardArr){
         }
     }).join('')
     resultCard.innerHTML = resultDisplay;
+    
 }
 //end of selected Displayed Card
 
@@ -242,6 +241,7 @@ function getCard(mysrc, myname){
     } else if((x < 60) && (myname === 'Trap Card' || myname === 'Normal Monster' || myname === 'Pendulum Effect Monster' || myname === 'Flip Effect Monster' || myname === 'Effect Monster' || myname === 'Spell Card' || myname === 'Tuner Monster' || myname === 'Token' || myname === 'Normal Tuner Monster' || myname === 'Spirit Monster' || myname === 'Link Monster' || myname === 'Union Effect Monster' || myname === 'Ritual Monster' || myname === 'Ritual Effect Monster' || myname === 'Gemini Monster' || myname === 'Toon Monster' || myname === 'Pendulum Normal Monster' || myname === 'Pendulum Flip Effect Monster' || myname === 'Synchro Tuner Monster' || myname === 'Skill Card' || myname === 'Pendulum Tuner Effect Monster' || myname === 'Pendulum Effect Fusion Monster')){
         cardList.innerHTML += `<div class="deckCard"><img id="deckCard" src="${mysrc}"/></div>`
     }
+    
 }
 
 function searchName(cardArr) {
@@ -264,22 +264,3 @@ function displaySearch(name, cardArr){
 
 
 
-// document.querySelector('.cardList').addEventListener('click', function() {
-    
-//     var someimage = document.getElementById('resultDisplay');
-//     var myimg = someimage.getElementsByTagName('img')[0];
-//     var mysrc = myimg.src;
-//     var myname = myimg.name;
-    
-//     console.log()
-// })
-
-// function removeCard(cardArr) {
-    
-//     document.querySelectorAll('.deckCard').forEach(function(event){
-//         event.addEventListener('click', function() {
-//           getDisplayResult(this.src, cardArr)
-//         });
-//       });
-
-// }
