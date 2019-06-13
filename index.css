@@ -195,9 +195,10 @@ body{
     width: 75%;
     height: 50vh;
     overflow: auto;
-    border: 2px white solid;
-    padding-left: 10px;
-    background-color: rgba(255, 255, 255, 0.164);
+    border: 2px rgb(255, 103, 103) double;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.205);
+    text-align: center;
 }
 
 .displayCard{
@@ -206,6 +207,7 @@ body{
 
 .displayedCard{
     display: inline-block;
+    padding: 5px;
 }
 
 .displayCardError{
@@ -227,7 +229,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px white solid;
+    border: 2px rgb(253, 34, 34) inset;
     background-image: url('https://i.ytimg.com/vi/cePNZQIS2vQ/maxresdefault.jpg');
     background-size: cover;
 }
@@ -258,26 +260,31 @@ body{
 
 
 .cardList{
-    border: 2px white solid;
+    border: 4px rgb(4, 204, 31) inset;
     width: 70%;
     box-sizing: border-box;
     height: 36vh;
-    background: linear-gradient(rgba(255,255,255,.5), rgba(255, 255, 255, 0.24)), url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06cb28af-a15c-45d3-b1b6-fcbc1910e0c3/dbsi7t0-7f68c2a3-f71c-4238-9ae0-49b99a5f1751.png/v1/fill/w_1024,h_633,strp/link_background_texture_yu_gi_oh__vrains_by_carlos123321_dbsi7t0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjMzIiwicGF0aCI6IlwvZlwvMDZjYjI4YWYtYTE1Yy00NWQzLWIxYjYtZmNiYzE5MTBlMGMzXC9kYnNpN3QwLTdmNjhjMmEzLWY3MWMtNDIzOC05YWUwLTQ5Yjk5YTVmMTc1MS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.ieF5uGzhXUmx79_uwJV43IQKU_ki_M7ynGpnbBpH6Yg');
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06cb28af-a15c-45d3-b1b6-fcbc1910e0c3/dbsi7t0-7f68c2a3-f71c-4238-9ae0-49b99a5f1751.png/v1/fill/w_1024,h_633,strp/link_background_texture_yu_gi_oh__vrains_by_carlos123321_dbsi7t0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjMzIiwicGF0aCI6IlwvZlwvMDZjYjI4YWYtYTE1Yy00NWQzLWIxYjYtZmNiYzE5MTBlMGMzXC9kYnNpN3QwLTdmNjhjMmEzLWY3MWMtNDIzOC05YWUwLTQ5Yjk5YTVmMTc1MS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.ieF5uGzhXUmx79_uwJV43IQKU_ki_M7ynGpnbBpH6Yg');
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
     display: inline-block;
     overflow: auto;
-    padding-left: 10px;
+    text-align: center;
 }
 
 .specialCardList{
-    border: 2px white solid;
+    border: 4px rgb(255, 158, 78) inset;
     height: 36vh;
     box-sizing: border-box;
     width: 30%;
-    background: linear-gradient(rgba(255,255,255,.5), rgba(255, 255, 255, 0.24)), url('https://images2.wikia.nocookie.net/__cb20130314221841/yugioh/images/5/50/Wiki-background');
+    background-image: url('https://images2.wikia.nocookie.net/__cb20130314221841/yugioh/images/5/50/Wiki-background');
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
     background-size: contain;
     display: inline-block;
     overflow: auto;
-    padding-left: 30px;
+    text-align: center;
+    border-left: none;
 }
 
 .deckCard{
@@ -295,12 +302,12 @@ body{
     display: inline-block;
     align-items: center;
     margin: auto;
-    width: 40%;
+    width: 50%;
     box-sizing: border-box;
 }
 
 #search{
-    width: 60%;
+    width: 40%;
 }
 
 

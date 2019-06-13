@@ -73,7 +73,9 @@ function displayType(cardArr){
     let filterList = cardArr.filter(distinct).map(type => {
         return `<option value="${type}">${type}</option>`;
     }).join('')
+    
     filterType.innerHTML = filterList;
+    filterType.innerHTML += `<option disabled selected>Select Card Type</option>`;
 }
 //end of getType
 
@@ -93,6 +95,7 @@ function displayAttribute(cardArr){
             return `<option value="${attribute}">${attribute}</option>`;
     }).join('')
     filterAttribute.innerHTML = filterList;
+    filterAttribute.innerHTML += `<option disabled selected>Select Card Attribute</option>`;
 }
 //end of getAttribute
 
@@ -110,6 +113,7 @@ function displayLevel(cardArr){
             return `<option value="${level}">${level}</option>`;
     }).join('')
     filterLevel.innerHTML = filterList;
+    filterLevel.innerHTML += `<option disabled selected>Select Card Level</option>`;
 }
 //end of getLevel
 
@@ -127,6 +131,7 @@ function displayRace(cardArr){
             return `<option value="${race}">${race}</option>`;
     }).join('')
     filterRace.innerHTML = filterList;
+    filterRace.innerHTML += `<option disabled selected>Select Card Race</option>`;
 }
 //end of getRace
 
