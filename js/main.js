@@ -25,7 +25,7 @@ var cardName = [];
 
 filter.style.display = 'none';
 search.style.display = 'none';
-
+$('.ui-helper-hidden-accessible').hide();
 
 
 filteredBtn.addEventListener('click', function() {
@@ -61,6 +61,7 @@ fetch(`${baseUrl}`)
         getRace([...card]);
         filterGet([...card])
         searchAll([...card]);
+        searchName([...card])
     })
 
 
@@ -79,19 +80,6 @@ function searchAll(cardArr){
         });
       } );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //start of getType
@@ -243,4 +231,22 @@ function getCard(mysrc, myname){
     } else if((x < 60) && (myname === 'Trap Card' || myname === 'Normal Monster' || myname === 'Pendulum Effect Monster' || myname === 'Flip Effect Monster' || myname === 'Effect Monster' || myname === 'Spell Card' || myname === 'Tuner Monster' || myname === 'Token' || myname === 'Normal Tuner Monster' || myname === 'Spirit Monster' || myname === 'Link Monster' || myname === 'Union Effect Monster' || myname === 'Ritual Monster' || myname === 'Ritual Effect Monster' || myname === 'Gemini Monster' || myname === 'Toon Monster' || myname === 'Pendulum Normal Monster' || myname === 'Pendulum Flip Effect Monster' || myname === 'Synchro Tuner Monster' || myname === 'Skill Card' || myname === 'Pendulum Tuner Effect Monster' || myname === 'Pendulum Effect Fusion Monster')){
         cardList.innerHTML += `<div class="deckCard"><img id="deckCard" src="${mysrc}"/></div>`
     }
+}
+
+function searchName(cardArr) {
+    document.querySelector('#searchBtn').addEventListener('click', function() {
+        searchName = document.querySelector('#search').value;
+
+
+        displaySearch(searchName, cardArr);
+    })
+}
+
+function displaySearch(name, cardArr){
+    let resultDisplay = cardArr.map(display => {
+        if(name === display.name){
+            return `<img id="resultImg" name="${display.type}" src="${display.image_url}""/>`
+        }
+    }).join('')
+    resultCard.innerHTML = resultDisplay;
 }
