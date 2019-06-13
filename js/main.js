@@ -19,7 +19,7 @@ const cardList = document.querySelector('.cardList');
 const specialCardList = document.querySelector('.specialCardList');
 
 
-
+var cardName = [];
 
 
 
@@ -59,7 +59,37 @@ fetch(`${baseUrl}`)
         getLevel([...card]);
         getRace([...card]);
         filterGet([...card])
+        searchAll([...card]);
     })
+
+
+
+
+function searchAll(cardArr){
+    cardArr.map(card => {
+        cardName.push(card.name);
+    })
+    
+    $( function() {
+    var newcardList = cardName;
+    
+        $( "#search" ).autocomplete({
+          source: newcardList
+        });
+      } );
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -73,7 +103,6 @@ function getType(cardArr){
 function displayType(cardArr){
 
     let filterList = cardArr.filter(distinct).map(type => {
-        console.log(type);
         return `<option value="${type}">${type}</option>`;
     }).join('')
     
@@ -207,7 +236,6 @@ function getCard(mysrc, myname){
 
     var x = cardList.childElementCount;
     var y = specialCardList.childElementCount;
-        console.log(x, y);
     
     if((y < 15) && (myname === 'Synchro Monster' || myname === 'XYZ Monster' || myname === 'Fusion Monster' || myname === 'XYZ Pendulum Effect Monster') || myname === 'Synchro Pendulum Effect Monster'){
         specialCardList.innerHTML += `<div class="deckCard"><img id="deckCard" src="${mysrc}"/></div>`

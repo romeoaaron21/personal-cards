@@ -47,7 +47,15 @@
         background-color: #45a049;
       }
       
-
+ul {
+    list-style-type: none;
+    height: 30vh; 
+    overflow: auto;
+    background-color: rgb(230, 228, 228);
+    width: 10%;
+    padding-left: 20px;
+    border: 1px inline
+}
 
 
 body{
@@ -318,3 +326,8 @@ body{
 .filter-select{
     margin: auto;
 }
+
+.ui-helper-hidden-accessible{
+    background-color: white;
+}
+
