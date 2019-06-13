@@ -27,6 +27,7 @@ filter.style.display = 'none';
 search.style.display = 'none';
 
 
+
 filteredBtn.addEventListener('click', function() {
     filter.style.display = 'block';
     filter_select.style.display = 'none';
