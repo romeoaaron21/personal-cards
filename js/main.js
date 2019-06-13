@@ -25,7 +25,6 @@ var cardName = [];
 
 filter.style.display = 'none';
 search.style.display = 'none';
-$('.ui-helper-hidden-accessible').hide();
 
 
 filteredBtn.addEventListener('click', function() {
@@ -36,6 +35,17 @@ filteredBtn.addEventListener('click', function() {
 searchedBtn.addEventListener('click', function() {
     search.style.display = 'block';
     filter_select.style.display = 'none';
+})
+
+
+document.querySelector('#backFilterBtn').addEventListener('click', function() {
+    filter.style.display = 'none';
+    filter_select.style.display = 'block';
+})
+
+document.querySelector('#backSearchBtn').addEventListener('click', function() {
+    search.style.display = 'none';
+    filter_select.style.display = 'block';
 })
 
 
@@ -62,6 +72,7 @@ fetch(`${baseUrl}`)
         filterGet([...card])
         searchAll([...card]);
         searchName([...card])
+        removeCard([...card]);
     })
 
 
@@ -250,3 +261,25 @@ function displaySearch(name, cardArr){
     }).join('')
     resultCard.innerHTML = resultDisplay;
 }
+
+
+
+// document.querySelector('.cardList').addEventListener('click', function() {
+    
+//     var someimage = document.getElementById('resultDisplay');
+//     var myimg = someimage.getElementsByTagName('img')[0];
+//     var mysrc = myimg.src;
+//     var myname = myimg.name;
+    
+//     console.log()
+// })
+
+// function removeCard(cardArr) {
+    
+//     document.querySelectorAll('.deckCard').forEach(function(event){
+//         event.addEventListener('click', function() {
+//           getDisplayResult(this.src, cardArr)
+//         });
+//       });
+
+// }

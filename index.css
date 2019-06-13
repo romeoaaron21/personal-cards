@@ -100,7 +100,7 @@ body{
 	line-height: 1;
 	padding: .6em 1.4em .5em .8em;
 	width: 100%;
-	max-width: 20%; 
+	max-width: 18%; 
 	box-sizing: border-box;
 	margin: 0;
 	border: 1px solid #aaa;
@@ -166,6 +166,16 @@ body{
 .filter-btn{
     width: 10%;
 }
+
+.back-btn {
+    background-color: rgb(235, 63, 63);
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0 50px;
+}
+
 
 .search-btn, .filtered-btn {
     background-color: rgb(10, 166, 177);
