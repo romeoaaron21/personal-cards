@@ -359,6 +359,10 @@ body{
 }
 
 
+.deckCard, .displayedCard, .resultDisplay{
+    cursor: pointer;
+}
+
 .cardList{
     border: 4px rgb(4, 204, 31) inset;
     width: 70%;
