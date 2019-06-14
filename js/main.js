@@ -1,5 +1,10 @@
 const baseUrl = 'https://db.ygoprodeck.com/api/v3/cardinfo.php';
 
+const filterTyping = document.querySelector('.filterTyping');
+const filterTyping1 = document.querySelector('.filterTyping1');
+const filterBtn1 = document.querySelector('#filterBtn1');
+
+
 const filterType = document.querySelector('.filterType');
 const filterAttribute = document.querySelector('.filterAttribute');
 const filterLevel = document.querySelector('.filterLevel');
@@ -7,6 +12,7 @@ const filterRace = document.querySelector('.filterRace');
 
 const filter = document.querySelector('.filter');
 const search = document.querySelector('.search');
+const filtering = document.querySelector('.filtering');
 const filter_select = document.querySelector('.filter-select');
 const searchedBtn = document.querySelector('#searchedBtn');
 const filteredBtn = document.querySelector('#filteredBtn');
@@ -20,11 +26,17 @@ const specialCardList = document.querySelector('.specialCardList');
 
 
 var cardName = [];
+var type1 = [];
+var attribute1 = [];
+var level1 = [];
+var race1 = [];
+
 
 
 
 filter.style.display = 'none';
 search.style.display = 'none';
+filtering.style.display = 'none';
 
 
 filteredBtn.addEventListener('click', function() {
@@ -48,6 +60,16 @@ document.querySelector('#backSearchBtn').addEventListener('click', function() {
     filter_select.style.display = 'block';
 })
 
+document.querySelector('#backFilteringBtn').addEventListener('click', function() {
+    filtering.style.display = 'none';
+    filter_select.style.display = 'block';
+})
+
+document.querySelector('#filteringBtn').addEventListener('click', function() {
+    filtering.style.display = 'block';
+    filter_select.style.display = 'none';
+})
+
 
 
 var type = [];
@@ -69,9 +91,20 @@ fetch(`${baseUrl}`)
         getAttribute([...card]);
         getLevel([...card]);
         getRace([...card]);
-        filterGet([...card])
+        filterGet([...card]);
         searchAll([...card]);
-        searchName([...card])
+        searchName([...card]);
+
+
+       // filttration([...card]);
+
+
+
+        getType1([...card]);
+        getAttribute1([...card]);
+        getRace1([...card]);
+        getLevel1([...card]);
+        
     })
 
 
@@ -309,3 +342,223 @@ function deleteSpecialCard(){
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function getType1(cardArr){
+    filterTyping.addEventListener('change', function() {
+        if(this.value === 'type'){
+            card = cardArr;
+            card.map(name => {
+                type1.push(name.type);
+            })
+            getTypeList([...type1], cardArr);
+        }
+    })
+}
+
+
+function getTypeList(typeArr, cardArr){
+    
+    let filterList = typeArr.filter(distinct).map(name => {
+        return `<option>${name}</option>`;
+    })
+    
+    document.querySelector('.filterTyping1').innerHTML = filterList;
+    filterGetType(cardArr);
+
+}
+
+
+//////////
+
+
+
+function getAttribute1(cardArr){
+    filterTyping.addEventListener('change', function() {
+        if(this.value === 'attribute'){
+            card = cardArr;
+            card.map(name => {
+                attribute1.push(name.attribute);
+            })
+            getAttributeList([...attribute1], cardArr);
+        }
+    })
+}
+
+
+function getAttributeList(attributeArr, cardArr){
+    
+    let filterList = attributeArr.filter(distinct).map(name => {
+        return `<option>${name}</option>`;
+    })
+    
+    document.querySelector('.filterTyping1').innerHTML = filterList;
+    filterGetAttribute(cardArr);
+
+}
+
+
+///////////
+
+
+
+function getRace1(cardArr){
+    filterTyping.addEventListener('change', function() {
+        if(this.value === 'race'){
+            card = cardArr;
+            card.map(name => {
+                race1.push(name.race);
+            })
+            getRaceList([...race1], cardArr);
+        }
+    })
+}
+
+
+function getRaceList(raceArr, cardArr){
+    
+    let filterList = raceArr.filter(distinct).map(name => {
+        return `<option>${name}</option>`;
+    })
+    
+    document.querySelector('.filterTyping1').innerHTML = filterList;
+    filterGetRace(cardArr);
+
+}
+
+
+///////////
+
+
+
+function getLevel1(cardArr){
+    filterTyping.addEventListener('change', function() {
+        if(this.value === 'level'){
+            card = cardArr;
+            card.map(name => {
+                level1.push(name.level);
+            })
+            getLevelList([...level1], cardArr);
+        }
+    })
+}
+
+
+function getLevelList(levelArr, cardArr){
+    
+    let filterList = levelArr.filter(distinct).map(name => {
+        return `<option>${name}</option>`;
+    })
+    
+    document.querySelector('.filterTyping1').innerHTML = filterList;
+    filterGetLevel(cardArr);
+
+}
+
+
+///////////
+
+
+
+//start of display Filtered Cards
+function filterGetType(cardArr){
+    filterBtn1.addEventListener('click', function() {
+
+        let displayingType = cardArr.map(card => {
+            if(filterTyping1.value === card.type){
+                return `<div class="displayedCard" id="${card.id}" ><img id="displayedCardResult" src="${card.image_url}" height="180px" name="${card.id}"/></div>`
+            }
+        }).join('')
+        displayCard.innerHTML = displayingType;
+        displayCardResult(cardArr);
+        
+    })
+    
+}
+
+
+/////////////
+
+
+
+
+function filterGetAttribute(cardArr){
+    filterBtn1.addEventListener('click', function() {
+
+        let displayingType = cardArr.map(card => {
+            if(filterTyping1.value === card.attribute){
+                return `<div class="displayedCard" id="${card.id}" ><img id="displayedCardResult" src="${card.image_url}" height="180px" name="${card.id}"/></div>`
+            }
+        }).join('')
+        displayCard.innerHTML = displayingType;
+        displayCardResult(cardArr);
+        
+    })
+    
+}
+
+
+
+/////////////
+
+
+
+
+function filterGetRace(cardArr){
+    filterBtn1.addEventListener('click', function() {
+
+        let displayingType = cardArr.map(card => {
+            if(filterTyping1.value === card.race){
+                return `<div class="displayedCard" id="${card.id}" ><img id="displayedCardResult" src="${card.image_url}" height="180px" name="${card.id}"/></div>`
+            }
+        }).join('')
+        displayCard.innerHTML = displayingType;
+        displayCardResult(cardArr);
+        
+    })
+    
+}
+
+
+/////////////
+
+
+
+
+function filterGetLevel(cardArr){
+    filterBtn1.addEventListener('click', function() {
+
+        let displayingType = cardArr.map(card => {
+            if(filterTyping1.value === card.level){
+                return `<div class="displayedCard" id="${card.id}" ><img id="displayedCardResult" src="${card.image_url}" height="180px" name="${card.id}"/></div>`
+            }
+        }).join('')
+        displayCard.innerHTML = displayingType;
+        displayCardResult(cardArr);
+        
+    })
+    
+}
+
+
+//end of display Filtered Cards
