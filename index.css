@@ -359,3 +359,8 @@ body{
 .spancard, .spancard1{
     margin-left: 20px;
 }
+
+#cardfull, #cardfull1{
+    color: red;
+    margin-left: 20px;
+}

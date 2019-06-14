@@ -229,23 +229,35 @@ resultCard.addEventListener('click', function() {
 })
    
 
-
+var x = cardList.childElementCount-1;
+var y = specialCardList.childElementCount-1;
 
 function getCard(mysrc, myname){
 
-    var x = cardList.childElementCount;
-    var y = specialCardList.childElementCount;
     
-    if((y <= 15) && (myname === 'Synchro Monster' || myname === 'XYZ Monster' || myname === 'Fusion Monster' || myname === 'XYZ Pendulum Effect Monster') || myname === 'Synchro Pendulum Effect Monster'){
+    
+    if((y < 15) && (myname === 'Synchro Monster' || myname === 'XYZ Monster' || myname === 'Fusion Monster' || myname === 'XYZ Pendulum Effect Monster') || myname === 'Synchro Pendulum Effect Monster'){
         specialCardList.innerHTML += `<div class="deckCard"><img id="deckCard" src="${mysrc}"/></div>`
+        y= y+1;
         document.querySelector('.spancard1').innerHTML = `${y} / 15`;
         deleteSpecialCard();
-    } else if((x <= 60) && (myname === 'Trap Card' || myname === 'Normal Monster' || myname === 'Pendulum Effect Monster' || myname === 'Flip Effect Monster' || myname === 'Effect Monster' || myname === 'Spell Card' || myname === 'Tuner Monster' || myname === 'Token' || myname === 'Normal Tuner Monster' || myname === 'Spirit Monster' || myname === 'Link Monster' || myname === 'Union Effect Monster' || myname === 'Ritual Monster' || myname === 'Ritual Effect Monster' || myname === 'Gemini Monster' || myname === 'Toon Monster' || myname === 'Pendulum Normal Monster' || myname === 'Pendulum Flip Effect Monster' || myname === 'Synchro Tuner Monster' || myname === 'Skill Card' || myname === 'Pendulum Tuner Effect Monster' || myname === 'Pendulum Effect Fusion Monster')){
+    } else if((x < 60) && (myname === 'Trap Card' || myname === 'Normal Monster' || myname === 'Pendulum Effect Monster' || myname === 'Flip Effect Monster' || myname === 'Effect Monster' || myname === 'Spell Card' || myname === 'Tuner Monster' || myname === 'Token' || myname === 'Normal Tuner Monster' || myname === 'Spirit Monster' || myname === 'Link Monster' || myname === 'Union Effect Monster' || myname === 'Ritual Monster' || myname === 'Ritual Effect Monster' || myname === 'Gemini Monster' || myname === 'Toon Monster' || myname === 'Pendulum Normal Monster' || myname === 'Pendulum Flip Effect Monster' || myname === 'Synchro Tuner Monster' || myname === 'Skill Card' || myname === 'Pendulum Tuner Effect Monster' || myname === 'Pendulum Effect Fusion Monster')){
         cardList.innerHTML += `<div class="deckCard"><img id="deckCard" src="${mysrc}"/></div>`
+        x= x+1;
         document.querySelector('.spancard').innerHTML = `${x} / 60`;
     deleteCard();
     }
     
+    if(x === 60){
+        document.querySelector('#cardfull').style.display = 'block';
+        document.querySelector('#cardfull').innerHTML = `FULL`;
+    }
+
+    if(y === 15){
+        document.querySelector('#cardfull1').style.display = 'block';
+        document.querySelector('#cardfull1').innerHTML = `FULL`;
+    }
+
 }
 
 function searchName(cardArr) {
@@ -270,7 +282,13 @@ function displaySearch(name, cardArr){
 function deleteCard(){
     document.querySelectorAll('.deckCard').forEach(function(event){
         event.addEventListener('click', function() {
-          this.style.display = 'none';
+                this.style.display = 'none';
+                x = x-1;
+                document.querySelector('.spancard').innerHTML = `${x} / 60`;
+
+                if(x < 60){
+                    document.querySelector('#cardfull').style.display = 'none';
+                }
         });
       });
 }
@@ -280,6 +298,12 @@ function deleteSpecialCard(){
     document.querySelectorAll('.deckCard').forEach(function(event){
         event.addEventListener('click', function() {
           this.style.display = 'none';
+          y = y-1;
+          document.querySelector('.spancard1').innerHTML = `${y} / 15`;
+
+          if(y < 15){
+            document.querySelector('#cardfull1').style.display = 'none';
+        }
         });
       });
 }
