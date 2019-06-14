@@ -239,6 +239,10 @@ body{
     text-align: center;
 }
 
+.displayCardError h1{
+    font-size: 2rem;
+}
+
 .displayedCardError{
     background-color: rgb(255, 0, 0);
     padding: 50px;
@@ -285,8 +289,10 @@ body{
     width: 70%;
     box-sizing: border-box;
     height: 36vh;
-    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06cb28af-a15c-45d3-b1b6-fcbc1910e0c3/dbsi7t0-7f68c2a3-f71c-4238-9ae0-49b99a5f1751.png/v1/fill/w_1024,h_633,strp/link_background_texture_yu_gi_oh__vrains_by_carlos123321_dbsi7t0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjMzIiwicGF0aCI6IlwvZlwvMDZjYjI4YWYtYTE1Yy00NWQzLWIxYjYtZmNiYzE5MTBlMGMzXC9kYnNpN3QwLTdmNjhjMmEzLWY3MWMtNDIzOC05YWUwLTQ5Yjk5YTVmMTc1MS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.ieF5uGzhXUmx79_uwJV43IQKU_ki_M7ynGpnbBpH6Yg');
-    background-color: rgba(255, 255, 255, 0.4);
+    background-image: url('https://i.imgur.com/CK72n1f.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.226);
     background-blend-mode: lighten;
     display: inline-block;
     overflow: auto;
@@ -298,8 +304,8 @@ body{
     height: 36vh;
     box-sizing: border-box;
     width: 30%;
-    background-image: url('https://images2.wikia.nocookie.net/__cb20130314221841/yugioh/images/5/50/Wiki-background');
-    background-color: rgba(255, 255, 255, 0.425);
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06cb28af-a15c-45d3-b1b6-fcbc1910e0c3/dbsi7t0-7f68c2a3-f71c-4238-9ae0-49b99a5f1751.png/v1/fill/w_1024,h_633,strp/link_background_texture_yu_gi_oh__vrains_by_carlos123321_dbsi7t0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjMzIiwicGF0aCI6IlwvZlwvMDZjYjI4YWYtYTE1Yy00NWQzLWIxYjYtZmNiYzE5MTBlMGMzXC9kYnNpN3QwLTdmNjhjMmEzLWY3MWMtNDIzOC05YWUwLTQ5Yjk5YTVmMTc1MS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.ieF5uGzhXUmx79_uwJV43IQKU_ki_M7ynGpnbBpH6Yg');
+    background-color: rgba(255, 255, 255, 0.377);
     background-blend-mode: lighten;
     background-size: contain;
     display: inline-block;
@@ -336,3 +342,20 @@ body{
     margin: auto;
 }
 
+.cardTitle, .cardTitle1{
+    background-color: rgba(8, 8, 8, 0.534);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.cardTitle span, .cardTitle1 span{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+
+
+.spancard, .spancard1{
+    margin-left: 20px;
+}

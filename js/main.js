@@ -236,11 +236,13 @@ function getCard(mysrc, myname){
     var x = cardList.childElementCount;
     var y = specialCardList.childElementCount;
     
-    if((y < 15) && (myname === 'Synchro Monster' || myname === 'XYZ Monster' || myname === 'Fusion Monster' || myname === 'XYZ Pendulum Effect Monster') || myname === 'Synchro Pendulum Effect Monster'){
+    if((y <= 15) && (myname === 'Synchro Monster' || myname === 'XYZ Monster' || myname === 'Fusion Monster' || myname === 'XYZ Pendulum Effect Monster') || myname === 'Synchro Pendulum Effect Monster'){
         specialCardList.innerHTML += `<div class="deckCard"><img id="deckCard" src="${mysrc}"/></div>`
+        document.querySelector('.spancard1').innerHTML = `${y} / 15`;
         deleteSpecialCard();
-    } else if((x < 60) && (myname === 'Trap Card' || myname === 'Normal Monster' || myname === 'Pendulum Effect Monster' || myname === 'Flip Effect Monster' || myname === 'Effect Monster' || myname === 'Spell Card' || myname === 'Tuner Monster' || myname === 'Token' || myname === 'Normal Tuner Monster' || myname === 'Spirit Monster' || myname === 'Link Monster' || myname === 'Union Effect Monster' || myname === 'Ritual Monster' || myname === 'Ritual Effect Monster' || myname === 'Gemini Monster' || myname === 'Toon Monster' || myname === 'Pendulum Normal Monster' || myname === 'Pendulum Flip Effect Monster' || myname === 'Synchro Tuner Monster' || myname === 'Skill Card' || myname === 'Pendulum Tuner Effect Monster' || myname === 'Pendulum Effect Fusion Monster')){
+    } else if((x <= 60) && (myname === 'Trap Card' || myname === 'Normal Monster' || myname === 'Pendulum Effect Monster' || myname === 'Flip Effect Monster' || myname === 'Effect Monster' || myname === 'Spell Card' || myname === 'Tuner Monster' || myname === 'Token' || myname === 'Normal Tuner Monster' || myname === 'Spirit Monster' || myname === 'Link Monster' || myname === 'Union Effect Monster' || myname === 'Ritual Monster' || myname === 'Ritual Effect Monster' || myname === 'Gemini Monster' || myname === 'Toon Monster' || myname === 'Pendulum Normal Monster' || myname === 'Pendulum Flip Effect Monster' || myname === 'Synchro Tuner Monster' || myname === 'Skill Card' || myname === 'Pendulum Tuner Effect Monster' || myname === 'Pendulum Effect Fusion Monster')){
         cardList.innerHTML += `<div class="deckCard"><img id="deckCard" src="${mysrc}"/></div>`
+        document.querySelector('.spancard').innerHTML = `${x} / 60`;
     deleteCard();
     }
     
@@ -281,3 +283,5 @@ function deleteSpecialCard(){
         });
       });
 }
+
+
