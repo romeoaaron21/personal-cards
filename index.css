@@ -1,0 +1,452 @@
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    }
+    
+    ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgb(142, 35, 35);
+    border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(218, 55, 55); 
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+    background: #ff0000;
+    }
+
+
+
+
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      
+      input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+      
+ul {
+    height: 30vh; 
+    overflow-y: scroll; 
+    overflow-x:hidden;
+    width: 19%;
+}
+
+
+
+body{
+    background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/601510/5844a29a9ccb0bca826058066acbb10126f1c402.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.header{
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.336);
+    display: flex;
+    align-items: center;
+}
+
+#logo{
+    height: 8vh;
+}
+
+.logo{
+    padding: 10px;
+}
+
+.filter{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#filter3 {
+    display: inline-block;
+	font-size: 1rem;
+	font-family: sans-serif;
+	font-weight: 700;
+	color: #444;
+	line-height: 1;
+	padding: .6em 1.4em .5em .8em;
+	width: 100%;
+	max-width: 25%; 
+	box-sizing: border-box;
+	margin: 0;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	border-radius: .5em;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+	  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+
+/*start of select-1*/
+#filter1, .filter2{
+    display: inline-block;
+	font-size: 1rem;
+	font-family: sans-serif;
+	font-weight: 700;
+	color: #444;
+	line-height: 1;
+	padding: .6em 1.4em .5em .8em;
+	width: 100%;
+	max-width: 18%; 
+	box-sizing: border-box;
+	margin: 0;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	border-radius: .5em;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+	  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+.filter1::-ms-expand, .filter2::-ms-expand {
+	display: none;
+}
+.filter1:hover, .filter2:hover {
+	border-color: #888;
+}
+.filter1:focus, .filter2:focus {
+	border-color: #aaa;
+	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	color: #222; 
+	outline: none;
+}
+.filter1 option, .filter2 option {
+	font-weight:normal;
+}
+/*end of select-1*/
+
+/*start of button*/
+.button {
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    user-select: none;
+}
+
+.button:hover{
+    background-color: #06ffff;
+}
+
+.button1 {
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    user-select: none;
+}
+
+.button1:hover{
+    background-color: #7e7cff;
+}
+
+.button2 {
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    user-select: none;
+}
+
+.button2:hover{
+    background-color: #23ff06;
+}
+
+.filter-btn, .search-btn {
+    background-color: rgb(10, 166, 177);
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0 50px;
+}
+
+.filter-btn{
+    width: 10%;
+}
+
+.back-btn {
+    background-color: rgb(235, 63, 63);
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0 50px;
+}
+
+
+.search-btn, .filtered-btn {
+    background-color: rgb(10, 166, 177);
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0 50px;
+    margin-left: 50px;
+    height: 40px;
+}
+
+.filtering-btn{
+    background-color: rgb(72, 69, 253);
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0 50px;
+    margin-left: 50px;
+    height: 40px;
+}
+
+.searched-btn{
+    background-color: rgb(100, 196, 100);
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0 50px;
+    margin-left: 50px;
+    height: 40px;
+}
+/*end of button*/
+
+
+
+.body{
+    box-sizing: border-box;
+    width: 100%;
+    overflow: auto;
+    display: inline-flex;
+    padding: 10px;
+}
+
+.display1{
+    width: 75%;
+    height: 50vh;
+    overflow: auto;
+    border: 2px rgb(255, 103, 103) double;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.205);
+    text-align: center;
+}
+
+.displayCard{
+    width: 100%;
+}
+
+.displayedCard{
+    display: inline-block;
+    padding: 5px;
+}
+
+.displayCardError{
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    text-align: center;
+}
+
+.displayCardError h1{
+    font-size: 2rem;
+}
+
+.displayedCardError{
+    background-color: rgb(255, 0, 0);
+    padding: 50px;
+    color: white;
+}
+
+.resultCard{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px rgb(253, 34, 34) inset;
+    background-image: url('https://i.ytimg.com/vi/cePNZQIS2vQ/maxresdefault.jpg');
+    background-size: cover;
+}
+
+.resultDisplay{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#resultImg{
+    height: 45vh;
+}
+
+
+
+
+.body1{
+    padding: 10px;
+    padding-top: 0;
+}
+
+.deckList{
+    display: flex;
+}
+
+
+.deckCard, .displayedCard, .resultDisplay{
+    cursor: pointer;
+}
+
+.cardList{
+    border: 4px rgb(4, 204, 31) inset;
+    width: 70%;
+    box-sizing: border-box;
+    height: 36vh;
+    background-image: url('https://i.imgur.com/CK72n1f.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.226);
+    background-blend-mode: lighten;
+    display: inline-block;
+    overflow: auto;
+    text-align: center;
+}
+
+.specialCardList{
+    border: 4px rgb(255, 158, 78) inset;
+    height: 36vh;
+    box-sizing: border-box;
+    width: 30%;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06cb28af-a15c-45d3-b1b6-fcbc1910e0c3/dbsi7t0-7f68c2a3-f71c-4238-9ae0-49b99a5f1751.png/v1/fill/w_1024,h_633,strp/link_background_texture_yu_gi_oh__vrains_by_carlos123321_dbsi7t0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjMzIiwicGF0aCI6IlwvZlwvMDZjYjI4YWYtYTE1Yy00NWQzLWIxYjYtZmNiYzE5MTBlMGMzXC9kYnNpN3QwLTdmNjhjMmEzLWY3MWMtNDIzOC05YWUwLTQ5Yjk5YTVmMTc1MS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.ieF5uGzhXUmx79_uwJV43IQKU_ki_M7ynGpnbBpH6Yg');
+    background-color: rgba(255, 255, 255, 0.377);
+    background-blend-mode: lighten;
+    background-size: contain;
+    display: inline-block;
+    overflow: auto;
+    text-align: center;
+    border-left: none;
+}
+
+.deckCard{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 5px;
+    
+}
+
+#deckCard{
+    height: 15vh;
+}
+
+.search{
+    display: inline-block;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+#search{
+    width: 40%;
+}
+
+
+.filter-select{
+    margin: auto;
+}
+
+.cardTitle, .cardTitle1{
+    background-color: rgba(8, 8, 8, 0.534);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.cardTitle span, .cardTitle1 span{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+
+
+.spancard, .spancard1{
+    margin-left: 20px;
+}
+
+#cardfull, #cardfull1{
+    color: red;
+    margin-left: 20px;
+}
+
+.filtering{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
