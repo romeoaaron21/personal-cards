@@ -1,4 +1,4 @@
-const baseUrl = 'https://db.ygoprodeck.com/api/v3/cardinfo.php';
+const baseUrl = 'https://cors-anywhere.herokuapp.com/https://db.ygoprodeck.com/api/v3/cardinfo.php';
 
 const filterTyping = document.querySelector('.filterTyping');
 const filterTyping1 = document.querySelector('.filterTyping1');
